@@ -6,3 +6,4 @@ dev
 packages/
 .apm/
 atom-shell/
+blob-store/

@@ -21,6 +21,7 @@
 
 '.editor':
   'cmd-alt-l': 'atom-beautify:beautify-editor'
+  'cmd-i': 'window:toggle-invisibles'
 
 'atom-workspace atom-text-editor:not([mini])':
   'cmd-]': 'pane:split-right-and-move-active-item'
@@ -28,8 +29,8 @@
 'atom-text-editor[data-grammar="source js jsx"]:not([mini])':
   'cmd-e': 'emmet:expand-abbreviation-with-tab'
 
-'.editor':
-  'cmd-i': 'window:toggle-invisibles'
+# '.editor':
+#   'cmd-i': 'window:toggle-invisibles'
 
 
 #'atom-text-editor[data-grammar="source js jsx"]:not([mini])':

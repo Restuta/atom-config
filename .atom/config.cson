@@ -1,0 +1,163 @@
+"*":
+  "atom-beautify":
+    css:
+      preserve_newlines: true
+      wrap_line_length: 140
+    general:
+      _analyticsUserId: "0aba0cf1-e830-49f9-9af8-ceee407e1435"
+    js:
+      indent_size: 2
+      keep_array_indentation: true
+      keep_function_indentation: true
+      max_preserve_newlines: 2
+      wrap_line_length: 140
+    json:
+      brace_style: "none"
+      indent_size: 2
+      keep_array_indentation: true
+  "atom-color-highlight": {}
+  "autoclose-html": {}
+  "autocomplete-modules":
+    vendors: [
+      "src/client"
+      "src/shared"
+      "src/server"
+      "node_modules"
+    ]
+    webpack: true
+    webpackConfigFilename: "webpack.config.dev.js"
+  core:
+    closeEmptyWindows: false
+    disabledPackages: [
+      "language-javascript-semantic"
+      "jsformat"
+      "react"
+      "refactor"
+      "js-refactor"
+      "tool-bar"
+      "linter-csslint"
+      "file-icons"
+      "linter-js-standard"
+    ]
+    excludeVcsIgnoredPaths: false
+    ignoredNames: [
+      "tmp"
+      ".idea"
+      "dist"
+      ".git"
+      "node_modules"
+      "bower_components"
+      "packages"
+    ]
+    packagesWithKeymapsDisabled: [
+      "highlight-line"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "seti-ui"
+      "seti-syntax"
+    ]
+  editor:
+    fontFamily: "Operator Mono, \"Menlo\""
+    fontSize: 15
+    invisibles: {}
+    lineHeight: 1.3
+    preferredLineLength: 140
+    scrollPastEnd: true
+    showIndentGuide: true
+  emmet: {}
+  "exception-reporting":
+    userId: "db19a564-23fd-1400-6880-a88ad146b973"
+  "file-icons": {}
+  "file-watcher":
+    promptWhenFileHasChangedOnDisk: false
+  "filetype-color":
+    enabled: "true"
+  "git-history": {}
+  "git-plus":
+    general:
+      _analyticsUserId: "d61f850e-31ea-4a6e-af22-ed1e761368a9"
+  "highlight-line":
+    hideHighlightOnSelect: true
+    underline: "dashed"
+  "highlight-selected":
+    highlightBackground: true
+  "isotope-ui":
+    backgroundColor: "false"
+    customBackgroundColor: true
+    customBackgroundColorPicker: "#1d1d1d"
+  jshint:
+    onlyConfig: true
+    supportLintingJsx: true
+  "language-babel": {}
+  linter:
+    showErrorPanel: false
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
+  "linter-ui-default": {}
+  "markdown-preview":
+    breakOnSingleNewline: true
+    useGitHubStyle: true
+  "merge-conflicts": {}
+  metrics:
+    userId: "c1720a55598b307fc3c69a2ee3453c8bf2e59405"
+  nuclide:
+    installRecommendedPackages: true
+    "nuclide-arcanist": {}
+    "nuclide-buck-files": {}
+    "nuclide-debugger-hhvm": {}
+    "nuclide-flow": {}
+    "nuclide-format-js": {}
+    "nuclide-hack": {}
+    "nuclide-health": {}
+    "nuclide-ocaml": {}
+    "nuclide-output": {}
+  react:
+    enabledForAllJavascriptFiles: true
+  "seti-ui":
+    compactView: true
+    font: "Default Atom Font"
+  "tool-bar":
+    position: "Left"
+  welcome:
+    showOnStartup: false
+".ansi.text":
+  editor:
+    preferredLineLength: 140
+".babel.regexp.source":
+  editor:
+    preferredLineLength: 140
+".coffee.jsx.source":
+  editor:
+    autoIndentOnPaste: true
+    preferredLineLength: 120
+".diff.source":
+  editor:
+    preferredLineLength: 140
+".git-commit.text":
+  editor:
+    preferredLineLength: 140
+".git-config.source":
+  editor:
+    preferredLineLength: 140
+".git-rebase.text":
+  editor:
+    preferredLineLength: 140
+".hack.html.text":
+  editor:
+    preferredLineLength: 140
+".hackfragment.source":
+  editor:
+    preferredLineLength: 140
+".handlebars.html.text":
+  editor:
+    preferredLineLength: 140
+".ini.source":
+  editor:
+    preferredLineLength: 140
+".js.jsx.source":
+  editor:
+    preferredLineLength: 120
+".text.todo":
+  editor:
+    preferredLineLength: 140

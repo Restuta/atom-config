@@ -1,0 +1,115 @@
+# Your snippets
+#
+# Atom snippets allow you to enter a simple prefix in the editor and hit tab to
+# expand the prefix into a larger code block with templated values.
+#
+# You can create a new snippet in this file by typing "snip" and then hitting
+# tab.
+#
+# An example CoffeeScript snippet to expand log to console.log:
+#
+# '.source.coffee':
+#   'Console log':
+#     'prefix': 'log'
+#     'body': 'console.log $1'
+#
+
+'.source.js':
+  'console.info':
+    'prefix': 'ci'
+    'body': 'console.info($1)'
+  'arrow func':
+    'prefix': 'lm'
+    'body': '() => {$1}'
+  'arrow func wiht one param':
+    'prefix': 'lmm'
+    'body': '$1 => {$2}'
+  'toString()':
+    'prefix': 'ts'
+    'body': 'toString()'
+  'function component':
+    'prefix': 'cof'
+    'body': 'const $1 = (props) => {return ($2)}'
+  'component':
+    'prefix': 'co'
+    'body': """
+      class $1 extends Component {
+        render() {
+          return (
+            $2
+          )
+        }
+      }
+    """
+  'bind function to this':
+    'prefix': 'bindthis'
+    'body': 'this.$1 = this.$1.bind(this)'
+
+  'new-file:component':
+    'prefix': 'co-file'
+    'body': """
+      import React, { PropTypes } from 'react'
+      import Component from 'react-pure-render/component'
+
+      export default class $1 extends Component {
+        render() {
+          $2
+          return (
+            <div className="$1"></div>
+          )
+        }
+      }
+
+      $1.propTypes = {}
+    """
+
+  'todo bc':
+    'prefix': 'tdbc'
+    'body': '//TODO bc: $1'
+  'tape test':
+    'prefix': 'test'
+    'body':"""
+      test('$1', t => {
+        $2
+
+        t.end()
+      })
+    """
+
+  'import:classnames':
+    'prefix': 'impcla'
+    'body': "import classnames from 'classnames'"
+  'import:row':
+    'prefix': 'improw'
+    'body': "import Row from 'atoms/Row.jsx'"
+  'import:col':
+    'prefix': 'impcol'
+    'body': "import Col from 'atoms/Col.jsx'"
+  'import:typography':
+    'prefix': 'imptypo'
+    'body': "import Typography from 'styles/typography'"
+  'import:colors':
+    'prefix': 'impclrs'
+    'body': "import Colors from 'styles/colors'"
+  'import:icons':
+    'prefix': 'impico'
+    'body': "import Icon from 'atoms/Icon.jsx'"
+  'import:grid':
+    'prefix': 'impgr'
+    'body': "import Grid from 'styles/grid'"
+  'import:connect':
+    'prefix': 'impcon'
+    'body': "import { connect } from 'react-redux'"
+
+  #RCN event snippets
+  'flyer':
+    'prefix': 'fflyer'
+    'body':"""
+      "flyer": {
+        "url": "$1",
+        "mimeType": "application/pdf"
+      },
+    """
+  'permit':
+    'prefix': 'pperm'
+    'body': '"usacPermit":"2017-$1",'

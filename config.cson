@@ -90,8 +90,7 @@
     onlyConfig: true
     supportLintingJsx: true
   "language-babel": {}
-  linter:
-    showErrorPanel: false
+  linter: {}
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
   "linter-ui-default": {}

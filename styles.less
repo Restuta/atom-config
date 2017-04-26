@@ -42,7 +42,24 @@ atom-text-editor {
   text-rendering: optimizeLegibility;
 }
 
+@primary-bg-color: #0e1112;
 
+
+// tweaking gutter look for seti-ui theme
+.atom-text-editor .gutter, atom-text-editor .gutter {
+  background-color: @primary-bg-color;
+  color: #404b53;
+}
+
+atom-text-editor .gutter-container {
+  margin-right: 6px;
+}
+
+//
+// atom-text-editor.editor .gutter[gutter-name="linter-ui-default"] .custom-decorations {
+//   background-color: transparent !important;
+//   background-color: @primary-bg-color !important;
+// }
 
 // atom-workspace,
 // atom-text-editor {

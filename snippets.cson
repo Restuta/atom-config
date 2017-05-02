@@ -101,6 +101,11 @@
     'prefix': 'impcon'
     'body': "import { connect } from 'react-redux'"
 
+  # BuildingConnected
+  'require:bluebird':
+    'prefix': 'rebluebird'
+    'body': "const P = require('bluebird')"
+
   #RCN event snippets
   'flyer':
     'prefix': 'fflyer'

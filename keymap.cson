@@ -29,6 +29,15 @@
 'atom-text-editor[data-grammar="source js jsx"]:not([mini])':
   'cmd-e': 'emmet:expand-abbreviation-with-tab'
 
+
+# enables hyperclick navigation
+".platform-darwin atom-text-editor":
+  "f12": "hyperclick:confirm-cursor"
+
+'atom-workspace':
+  'ctrl--': 'last-cursor-position:previous'
+  'ctrl-=': 'last-cursor-position:next'
+
 # '.editor':
 #   'cmd-i': 'window:toggle-invisibles'
 

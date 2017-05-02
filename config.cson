@@ -114,6 +114,10 @@
   "package-sync":
     createOnChange: true
     forceOverwrite: true
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+    useEslint: true
   react:
     enabledForAllJavascriptFiles: true
   "seti-ui":

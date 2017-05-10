@@ -105,6 +105,16 @@
   'require:bluebird':
     'prefix': 'rebluebird'
     'body': "const P = require('bluebird')"
+  'require:chalk':
+    'prefix': 'rechalk'
+    'body': "const chalk = require('chalk')"
+  'require:debug':
+    'prefix': 'redebug'
+    'body': """
+	     const chalk = require('chalk')
+	     const util = require('util')
+	     const debug = msg => console.info(chalk.blue(util.inspect(msg)))
+    """
 
   #RCN event snippets
   'flyer':

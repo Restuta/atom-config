@@ -48,11 +48,20 @@ atom-text-editor {
 // tweaking gutter look for seti-ui theme
 .atom-text-editor .gutter, atom-text-editor .gutter {
   background-color: @primary-bg-color;
+  background-color: transparent;
   color: #404b53;
 }
 
+span.line-number.cursor-line.linter-cursor-line.cursor-line-no-selection {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
 atom-text-editor .gutter-container {
-  margin-right: 6px;
+  // margin-right: 6px;
+}
+
+atom-pane.pane {
+  border-left: 1px solid black;  
 }
 
 //

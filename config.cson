@@ -2,7 +2,7 @@
   "atom-beautify":
     css:
       preserve_newlines: true
-      wrap_line_length: 140
+      wrap_line_length: 120
     general:
       _analyticsUserId: "0aba0cf1-e830-49f9-9af8-ceee407e1435"
     js:
@@ -10,7 +10,7 @@
       keep_array_indentation: true
       keep_function_indentation: true
       max_preserve_newlines: 2
-      wrap_line_length: 140
+      wrap_line_length: 100
     json:
       brace_style: "none"
       indent_size: 2
@@ -26,8 +26,14 @@
     ]
     webpack: true
     webpackConfigFilename: "webpack.config.dev.js"
+  "color-tabs":
+    backgroundStyle: "none"
+    markerStyle: "round"
+  "color-tabs-regex":
+    regexEngine: "String.match"
   core:
     closeEmptyWindows: false
+    destroyEmptyPanes: false
     disabledPackages: [
       "language-javascript-semantic"
       "jsformat"
@@ -51,6 +57,7 @@
     ]
     packagesWithKeymapsDisabled: [
       "highlight-line"
+      "last-cursor-position"
     ]
     telemetryConsent: "limited"
     themes: [
@@ -59,11 +66,11 @@
     ]
   editor:
     fontFamily: "Operator Mono, \"Menlo\""
+    fontSize: 15
     invisibles: {}
     lineHeight: 1.3
-    preferredLineLength: 140
+    preferredLineLength: 100
     scrollPastEnd: true
-    showIndentGuide: true
   emmet: {}
   "exception-reporting":
     userId: "db19a564-23fd-1400-6880-a88ad146b973"
@@ -72,10 +79,14 @@
     promptWhenFileHasChangedOnDisk: false
   "filetype-color":
     enabled: "true"
+  "flow-ide": {}
+  "foldername-tabs": {}
   "git-history": {}
   "git-plus":
     general:
       _analyticsUserId: "d61f850e-31ea-4a6e-af22-ed1e761368a9"
+    remoteInteractions:
+      pullRebase: true
   "highlight-line":
     hideHighlightOnSelect: true
     underline: "dashed"
@@ -93,7 +104,7 @@
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
   "linter-ui-default":
-    showPanel: true
+    panelHeight: 165
   "markdown-preview":
     breakOnSingleNewline: true
     useGitHubStyle: true
@@ -126,8 +137,20 @@
   "seti-ui":
     compactView: true
     font: "Default Atom Font"
+  "smart-tab-name": {}
+  "spell-check":
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "comment.line.double-slash.js"
+    ]
   "tool-bar":
     position: "Left"
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
 ".ansi.text":
@@ -166,7 +189,7 @@
     preferredLineLength: 140
 ".js.jsx.source":
   editor:
-    preferredLineLength: 120
+    preferredLineLength: 100
 ".text.todo":
   editor:
     preferredLineLength: 140

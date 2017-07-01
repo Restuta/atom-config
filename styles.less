@@ -61,8 +61,54 @@ atom-text-editor .gutter-container {
 }
 
 atom-pane.pane {
-  border-left: 1px solid black;  
+  border-left: 1px solid black;
 }
+
+// indent-guide-improved package
+.indent-guide-improved {
+  background-color: rgba(245, 250, 255, 0.04);;
+  &.indent-guide-stack {
+    background-color: rgba(245, 250, 255, 0.05);;
+    &.indent-guide-active {
+      background-color: rgba(245, 250, 255, 0.1);;
+    }
+  }
+}
+
+
+// styles "color-tabs" when "marker-style = round" is used
+ul.tab-bar > li.tab[is="tabs-tab"] .marker {
+  left: 0px !important;
+  border-width: 3px !important;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+// react, JSX, components syntax specific
+
+span.syntax--entity.syntax--name.syntax--tag.syntax--open.syntax--jsx,
+span.syntax--entity.syntax--name.syntax--tag.syntax--close.syntax--jsx {
+  // color: darken(#6699CC, 10%);
+  // color: darken(#F99157, 0%);
+}
+
+// base 00: #1B2B34
+// base 01: #343D46
+// base 02: #4F5B66
+// base 03: #65737E
+// base 04: #A7ADBA
+// base 05: #C0C5CE
+// base 06: #CDD3DE
+// base 07: #D8DEE9
+// base 08: #EC5f67
+// base 09: #F99157
+// base 0A: #FAC863
+// base 0B: #99C794
+// base 0C: #5FB3B3
+// base 0D: #6699CC
+// base 0E: #C594C5
+// base 0F: #AB7967
+
 
 //
 // atom-text-editor.editor .gutter[gutter-name="linter-ui-default"] .custom-decorations {

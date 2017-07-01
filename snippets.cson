@@ -105,16 +105,51 @@
   'require:bluebird':
     'prefix': 'rebluebird'
     'body': "const P = require('bluebird')"
+  'require:lodash':
+    'prefix': 'relodash'
+    'body': "const _ = require('_')"
+  'p.coroutine':
+    'prefix': 'pco',
+    'body': """
+      P.coroutine(function *$1 {
+        $2
+      })
+    """
   'require:chalk':
     'prefix': 'rechalk'
     'body': "const chalk = require('chalk')"
   'require:debug':
     'prefix': 'redebug'
     'body': """
-	     const chalk = require('chalk')
-	     const util = require('util')
-	     const debug = msg => console.info(chalk.blue(util.inspect(msg)))
+// TODO BC: remove following line
+const chalk = require('chalk'); const util = require('util'); const debug = msg => console.info(chalk.blue(util.inspect(msg, {depth: 4}))) // eslint-disable-line
+$1
     """
+  'bc:new-file:component':
+    'prefix': 'bc-co-file'
+    'body': """
+      // @flow
+      import React from 'react'
+      import { useClasses } from 'shared/jss'
+      import type { classesType } from 'shared/jss'
+
+      const $1 = ({
+        classes,
+      }: {
+        classes: classesType,
+      }) => {
+        return (
+          <div></div>
+        )
+      }
+
+      const styles = {
+
+      }
+
+      export default useClasses(styles)($1)
+    """
+
 
   #RCN event snippets
   'flyer':

@@ -22,6 +22,7 @@
 '.editor':
   'cmd-alt-l': 'atom-beautify:beautify-editor'
   'cmd-i': 'window:toggle-invisibles'
+  'cmd-l': 'editor:delete-line'
 
 'atom-workspace atom-text-editor:not([mini])':
   'cmd-]': 'pane:split-right-and-move-active-item'
@@ -35,8 +36,14 @@
   "f12": "hyperclick:confirm-cursor"
 
 'atom-workspace':
-  'ctrl--': 'last-cursor-position:previous'
-  'ctrl-=': 'last-cursor-position:next'
+  'ctrl-[': 'last-cursor-position:previous'
+  'ctrl-]': 'last-cursor-position:next'
+
+'atom-text-editor':
+  "alt-shift-f": "prettier:format",
+
+'atom-text-editor:not([mini])':
+  'alt-shift-C': 'editor:copy-project-path'
 
 # '.editor':
 #   'cmd-i': 'window:toggle-invisibles'

@@ -25,11 +25,13 @@
   'cmd-l': 'editor:delete-line'
 
 'atom-workspace atom-text-editor:not([mini])':
-  'cmd-]': 'pane:split-right-and-move-active-item'
+  'cmd-}': 'pane:split-right-and-move-active-item'
+  'cmd-{': 'pane:split-letf-and-move-active-item'
+  'cmd-[': 'pane:show-previous-item'
+  'cmd-]': 'pane:show-next-item'
 
 'atom-text-editor[data-grammar="source js jsx"]:not([mini])':
   'cmd-e': 'emmet:expand-abbreviation-with-tab'
-
 
 # enables hyperclick navigation
 ".platform-darwin atom-text-editor":
@@ -38,9 +40,12 @@
 'atom-workspace':
   'ctrl-[': 'last-cursor-position:previous'
   'ctrl-]': 'last-cursor-position:next'
+  'ctrl-l': 'window:focus-pane-on-left'
+  'ctrl-r': 'window:focus-pane-on-right'
 
 'atom-text-editor':
-  "alt-shift-f": "prettier:format",
+  "alt-f": "prettier:format",
+  "cmd-shift-enter": "hey-pane:toggle-focus-of-active-pane"
 
 'atom-text-editor:not([mini])':
   'alt-shift-C': 'editor:copy-project-path'

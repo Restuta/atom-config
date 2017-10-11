@@ -18,6 +18,9 @@
   'console.info':
     'prefix': 'ci'
     'body': 'console.info($1)'
+  'console.dir':
+    'prefix': 'cd'
+    'body': 'console.dir($1, { colors: true, depth: 4 })'
   'arrow func':
     'prefix': 'lm'
     'body': '() => {$1}'
@@ -108,6 +111,9 @@
   'require:lodash':
     'prefix': 'relodash'
     'body': "const _ = require('_')"
+  'require:ramda':
+    'prefix': 'rr',
+    'body': "const R = require('ramda')"
   'p.coroutine':
     'prefix': 'pco',
     'body': """
@@ -121,9 +127,8 @@
   'require:debug':
     'prefix': 'redebug'
     'body': """
-// TODO BC: remove following line
-const chalk = require('chalk'); const util = require('util'); const debug = msg => console.info(chalk.blue(util.inspect(msg, {depth: 4}))) // eslint-disable-line
-$1
+const createDebugLogger = require('bc/debug-logger')
+const debug = createDebugLogger('$1')
     """
   'bc:new-file:component':
     'prefix': 'bc-co-file'

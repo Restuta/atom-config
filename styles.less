@@ -34,6 +34,10 @@ atom-text-editor {
   // font-family: "Operator Mono", "Menlo";
 }
 
+status-bar .inline-block.file-info {
+  font-size: 130%;
+}
+
 .syntax--type.syntax--function.syntax--arrow.syntax--js,
 .syntax--operator.syntax--comparison.syntax--js,
 .syntax--operator.syntax--relational.syntax--js
@@ -91,6 +95,54 @@ span.syntax--entity.syntax--name.syntax--tag.syntax--close.syntax--jsx {
   // color: darken(#6699CC, 10%);
   // color: darken(#F99157, 0%);
 }
+
+// tasks .todo extension
+atom-text-editor.editor .syntax--tasks.syntax--header {
+  color: darken(#EC5f67, 0%);
+  font-size: 120%;
+  font-weight: 700;
+}
+
+atom-text-editor.editor .syntax--tasks.syntax--done .syntax--marker {
+  color: fade(darken(#99C794, 20%), 60%);
+}
+
+atom-text-editor.editor .syntax--tasks.syntax--cancelled .syntax--marker {
+  color: fade(darken(#FAC863, 20%), 60%);
+}
+
+atom-text-editor.editor .syntax--tasks.syntax--marker {
+  color: #65737E;
+}
+
+atom-text-editor.editor .syntax--tasks.syntax--done.syntax--text,
+atom-text-editor.editor .syntax--tasks.syntax--cancelled.syntax--text {
+  color: #4F5B66;
+  // text-decoration: line-through;
+}
+
+
+atom-text-editor.editor .syntax--tasks.syntax--done .syntax--attribute,
+atom-text-editor.editor .syntax--tasks.syntax--cancelled .syntax--attribute {
+  color: #343D46;
+  // text-decoration: line-through;
+}
+
+atom-text-editor.editor .syntax--tasks.syntax--attribute {
+  color: fade(#6699CC, 60%);
+}
+
+atom-panel-container.left .entries.list-tree .directory.entry.list-nested-item.status-modified, atom-panel-container.right .entries.list-tree .directory.entry.list-nested-item.status-modified, atom-panel-container.left .entries.list-tree .file.entry.list-item.status-modified, atom-panel-container.right .entries.list-tree .file.entry.list-item.status-modified {
+  color: #51ba7d;
+}
+
+// js object keys
+.syntax--js .syntax--constant.syntax--other.syntax--object.syntax--key.syntax--js .syntax--string.syntax--unquoted.syntax--js,
+span.syntax--constant.syntax--other.syntax--object.syntax--key.syntax--js  span.syntax--string,
+{
+  color: #99C794;
+}
+
 
 // base 00: #1B2B34
 // base 01: #343D46

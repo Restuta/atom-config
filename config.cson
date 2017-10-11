@@ -44,6 +44,7 @@
       "linter-csslint"
       "file-icons"
       "linter-js-standard"
+      "linter"
     ]
     excludeVcsIgnoredPaths: false
     ignoredNames: [
@@ -54,6 +55,7 @@
       "node_modules"
       "bower_components"
       "packages"
+      "data"
     ]
     packagesWithKeymapsDisabled: [
       "highlight-line"
@@ -64,9 +66,14 @@
       "seti-ui"
       "seti-syntax"
     ]
+  docblockr:
+    align_tags: "shallow"
+    per_section_indent: true
+    return_tag: "@returns"
+    short_primitives: true
   editor:
     fontFamily: "Operator Mono, \"Menlo\""
-    fontSize: 15
+    fontSize: 16
     invisibles: {}
     lineHeight: 1.3
     preferredLineLength: 100
@@ -87,6 +94,10 @@
       _analyticsUserId: "d61f850e-31ea-4a6e-af22-ed1e761368a9"
     remoteInteractions:
       pullRebase: true
+  github:
+    viewChangesForCurrentFileDiffPaneSplitDirection: "right"
+  "hey-pane":
+    expandedWidth: 70
   "highlight-line":
     hideHighlightOnSelect: true
     underline: "dashed"
@@ -127,8 +138,10 @@
     forceOverwrite: true
   "prettier-atom":
     formatOnSaveOptions:
-      enabled: false
+      showInStatusBar: true
+    prettierEslintOptions: {}
     prettierOptions:
+      printWidth: 65
       semi: false
       singleQuote: true
     useEslint: true
@@ -147,10 +160,17 @@
       "text.plain.null-grammar"
       "comment.line.double-slash.js"
     ]
+  "split-diff":
+    colors:
+      addedColor: "#428b35"
+      removedColor: "#cc0031"
+  tasks:
+    archiveSeparator: "-------------------------------------------"
+    baseMarker: "-"
+    dateFormat: "YYYY-MM-DD"
   "tool-bar":
     position: "Left"
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   welcome:
     showOnStartup: false
 ".ansi.text":

@@ -8,7 +8,6 @@
  * http://www.lesscss.org
  */
 
-
 // .tree-view {
 //
 // }
@@ -29,28 +28,39 @@
 //     font-size: 12;
 // }
 
+html,
+body,
+.tree-view {
+  font-size: 14px;
+}
+
+html,
+body,
+.tab-bar .tab {
+  font-size: 13px;
+}
+
 atom-text-editor {
   text-rendering: optimizeLegibility;
   // font-family: "Operator Mono", "Menlo";
 }
 
 status-bar .inline-block.file-info {
-  font-size: 130%;
+  font-size: 140%;
 }
 
 .syntax--type.syntax--function.syntax--arrow.syntax--js,
 .syntax--operator.syntax--comparison.syntax--js,
-.syntax--operator.syntax--relational.syntax--js
-{
+.syntax--operator.syntax--relational.syntax--js {
   font-family: "Fira Code";
   text-rendering: optimizeLegibility;
 }
 
 @primary-bg-color: #0e1112;
 
-
 // tweaking gutter look for seti-ui theme
-.atom-text-editor .gutter, atom-text-editor .gutter {
+.atom-text-editor .gutter,
+atom-text-editor .gutter {
   background-color: @primary-bg-color;
   background-color: transparent;
   color: #404b53;
@@ -60,8 +70,12 @@ span.line-number.cursor-line.linter-cursor-line.cursor-line-no-selection {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
+.gutter .line-numbers {
+  margin-right: 5px;
+}
+
 atom-text-editor .gutter-container {
-  // margin-right: 6px;
+  //margin-right: 6px;
 }
 
 atom-pane.pane {
@@ -70,15 +84,14 @@ atom-pane.pane {
 
 // indent-guide-improved package
 .indent-guide-improved {
-  background-color: rgba(245, 250, 255, 0.04);;
+  background-color: rgba(245, 250, 255, 0.04);
   &.indent-guide-stack {
-    background-color: rgba(245, 250, 255, 0.05);;
+    background-color: rgba(245, 250, 255, 0.05);
     &.indent-guide-active {
-      background-color: rgba(245, 250, 255, 0.1);;
+      background-color: rgba(245, 250, 255, 0.1);
     }
   }
 }
-
 
 // styles "color-tabs" when "marker-style = round" is used
 ul.tab-bar > li.tab[is="tabs-tab"] .marker {
@@ -98,51 +111,99 @@ span.syntax--entity.syntax--name.syntax--tag.syntax--close.syntax--jsx {
 
 // tasks .todo extension
 atom-text-editor.editor .syntax--tasks.syntax--header {
-  color: darken(#EC5f67, 0%);
+  color: darken(#ec5f67, 0%);
   font-size: 120%;
   font-weight: 700;
 }
 
 atom-text-editor.editor .syntax--tasks.syntax--done .syntax--marker {
-  color: fade(darken(#99C794, 20%), 60%);
+  color: fade(darken(#99c794, 20%), 60%);
 }
 
 atom-text-editor.editor .syntax--tasks.syntax--cancelled .syntax--marker {
-  color: fade(darken(#FAC863, 20%), 60%);
+  color: fade(darken(#fac863, 20%), 60%);
 }
 
 atom-text-editor.editor .syntax--tasks.syntax--marker {
-  color: #65737E;
+  color: #65737e;
 }
 
 atom-text-editor.editor .syntax--tasks.syntax--done.syntax--text,
 atom-text-editor.editor .syntax--tasks.syntax--cancelled.syntax--text {
-  color: #4F5B66;
+  color: #4f5b66;
   // text-decoration: line-through;
 }
 
-
 atom-text-editor.editor .syntax--tasks.syntax--done .syntax--attribute,
 atom-text-editor.editor .syntax--tasks.syntax--cancelled .syntax--attribute {
-  color: #343D46;
+  color: #343d46;
   // text-decoration: line-through;
 }
 
 atom-text-editor.editor .syntax--tasks.syntax--attribute {
-  color: fade(#6699CC, 60%);
+  color: fade(#6699cc, 60%);
 }
 
-atom-panel-container.left .entries.list-tree .directory.entry.list-nested-item.status-modified, atom-panel-container.right .entries.list-tree .directory.entry.list-nested-item.status-modified, atom-panel-container.left .entries.list-tree .file.entry.list-item.status-modified, atom-panel-container.right .entries.list-tree .file.entry.list-item.status-modified {
+atom-panel-container.left
+  .entries.list-tree
+  .directory.entry.list-nested-item.status-modified,
+atom-panel-container.right
+  .entries.list-tree
+  .directory.entry.list-nested-item.status-modified,
+atom-panel-container.left
+  .entries.list-tree
+  .file.entry.list-item.status-modified,
+atom-panel-container.right
+  .entries.list-tree
+  .file.entry.list-item.status-modified {
   color: #51ba7d;
 }
 
-// js object keys
-.syntax--js .syntax--constant.syntax--other.syntax--object.syntax--key.syntax--js .syntax--string.syntax--unquoted.syntax--js,
-span.syntax--constant.syntax--other.syntax--object.syntax--key.syntax--js  span.syntax--string,
-{
-  color: #99C794;
+li.list-item.match-row.selected {
+  background-color: hsla(261, 57%, 57%, 0.78);
 }
 
+.preview-pane .results-view .match-row.selected .preview {
+  color: white;
+}
+
+span.line-number.text-subtle {
+  color: #3c3550;
+}
+
+// color of the file in search results
+.list-nested-item > .list-item.path-row {
+  color: #857faf;
+  background-color: #291f3e;
+}
+
+.match.highlight-info {
+  color: #619ab3;
+  background-color: rgba(30, 83, 115, 0.42);
+}
+
+.syntax--meta.syntax--brace.syntax--round {
+  color: rgba(160, 160, 160, 0.9) !important;
+}
+
+// js object keys
+.syntax--js
+  .syntax--constant.syntax--other.syntax--object.syntax--key.syntax--js
+  .syntax--string.syntax--unquoted.syntax--js,
+span.syntax--constant.syntax--other.syntax--object.syntax--key.syntax--js
+  span.syntax--string {
+  color: #99c794;
+}
+
+// react closing tag override
+.syntax--js.syntax--jsx .syntax--tag.syntax--close,
+.syntax--js.syntax--jsx
+  .syntax--tag.syntax--closed
+  .syntax--entity.syntax--name.syntax--tag.syntax--js,
+.syntax--js.syntax--jsx
+  .syntax--support.syntax--class.syntax--component.syntax--close.syntax--jsx {
+  color: #71363a;
+}
 
 // base 00: #1B2B34
 // base 01: #343D46
@@ -160,7 +221,6 @@ span.syntax--constant.syntax--other.syntax--object.syntax--key.syntax--js  span.
 // base 0D: #6699CC
 // base 0E: #C594C5
 // base 0F: #AB7967
-
 
 //
 // atom-text-editor.editor .gutter[gutter-name="linter-ui-default"] .custom-decorations {

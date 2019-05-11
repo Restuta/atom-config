@@ -27,8 +27,10 @@
 'atom-workspace atom-text-editor:not([mini])':
   'cmd-}': 'pane:split-right-and-move-active-item'
   'cmd-{': 'pane:split-letf-and-move-active-item'
-  'cmd-[': 'pane:show-previous-item'
-  'cmd-]': 'pane:show-next-item'
+  'ctrl-l': 'pane:show-previous-item'
+  'ctrl-r': 'pane:show-next-item'
+  'cmd-[': 'window:focus-pane-on-left'
+  'cmd-]': 'window:focus-pane-on-right'
 
 'atom-text-editor[data-grammar="source js jsx"]:not([mini])':
   'cmd-e': 'emmet:expand-abbreviation-with-tab'
@@ -40,8 +42,6 @@
 'atom-workspace':
   'ctrl-[': 'last-cursor-position:previous'
   'ctrl-]': 'last-cursor-position:next'
-  'ctrl-l': 'window:focus-pane-on-left'
-  'ctrl-r': 'window:focus-pane-on-right'
 
 'atom-text-editor':
   "alt-f": "prettier:format",

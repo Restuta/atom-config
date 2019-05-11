@@ -156,6 +156,8 @@ const debug = createDebugLogger('$1')
     """
 
 
+
+
   #RCN event snippets
   'flyer':
     'prefix': 'fflyer'
@@ -168,3 +170,32 @@ const debug = createDebugLogger('$1')
   'permit':
     'prefix': 'pperm'
     'body': '"usacPermit":"2017-$1",'
+
+  #  toast snippets
+  'to:new-file-query':
+    'prefix': 'to-query'
+    'body': """
+      const { $1 } = require('toast/app/$2/db/models')
+
+      module.exports = transaction => async (props, { transaction } = {}) => {
+      	const result = await $1.create(props, { transaction })
+
+      	return result.get({ plain: true })
+      }
+    """
+  'toast log':
+    'prefix': 'to-log',
+    'body': "const log = require('toast/lib/log')"
+  'toast log  json':
+    'prefix': 'lj',
+    'body': 'log.json($1, { colors: true, depth: 4 })'
+
+  # DivvyHomes snippets
+  'dv:import:component':
+    'prefix': 'dvimco'
+    'body': "import $1 from '@app/components/$1'"
+
+  # React
+  'className=""':
+    'prefix': 'cn'
+    'body': 'className=""'

@@ -33,17 +33,15 @@
     regexEngine: "String.match"
   core:
     closeEmptyWindows: false
-    destroyEmptyPanes: false
     disabledPackages: [
       "language-javascript-semantic"
       "jsformat"
       "react"
       "refactor"
       "js-refactor"
-      "tool-bar"
       "linter-csslint"
-      "file-icons"
       "linter-js-standard"
+      "language-r"
       "linter"
     ]
     excludeVcsIgnoredPaths: false
@@ -55,7 +53,8 @@
       "node_modules"
       "bower_components"
       "packages"
-      "data"
+      ".cache"
+      "public/static/d"
     ]
     packagesWithKeymapsDisabled: [
       "highlight-line"
@@ -66,6 +65,8 @@
       "seti-ui"
       "seti-syntax"
     ]
+    titleBar: "custom"
+    useTreeSitterParsers: false
   docblockr:
     align_tags: "shallow"
     per_section_indent: true
@@ -76,8 +77,9 @@
     fontSize: 16
     invisibles: {}
     lineHeight: 1.3
-    preferredLineLength: 100
+    preferredLineLength: 140
     scrollPastEnd: true
+    softWrapAtPreferredLineLength: true
   emmet: {}
   "exception-reporting":
     userId: "db19a564-23fd-1400-6880-a88ad146b973"
@@ -86,7 +88,8 @@
     promptWhenFileHasChangedOnDisk: false
   "filetype-color":
     enabled: "true"
-  "flow-ide": {}
+  "flow-ide":
+    showUncovered: true
   "foldername-tabs": {}
   "git-history": {}
   "git-plus":
@@ -107,6 +110,7 @@
     backgroundColor: "false"
     customBackgroundColor: true
     customBackgroundColorPicker: "#1d1d1d"
+  "js-hyperclick": {}
   jshint:
     onlyConfig: true
     supportLintingJsx: true
@@ -115,7 +119,7 @@
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
   "linter-ui-default":
-    panelHeight: 165
+    panelHeight: 300
   "markdown-preview":
     breakOnSingleNewline: true
     useGitHubStyle: true
@@ -136,12 +140,15 @@
   "package-sync":
     createOnChange: true
     forceOverwrite: true
+  pigments:
+    extendAutocompleteToColorValue: true
   "prettier-atom":
     formatOnSaveOptions:
+      enabled: true
       showInStatusBar: true
     prettierEslintOptions: {}
     prettierOptions:
-      printWidth: 65
+      printWidth: 85
       semi: false
       singleQuote: true
     useEslint: true
@@ -164,6 +171,8 @@
     colors:
       addedColor: "#428b35"
       removedColor: "#cc0031"
+  tabs:
+    enableVcsColoring: true
   tasks:
     archiveSeparator: "-------------------------------------------"
     baseMarker: "-"
@@ -173,6 +182,8 @@
   "tree-view": {}
   welcome:
     showOnStartup: false
+  zentabs:
+    neverCloseUnsaved: true
 ".ansi.text":
   editor:
     preferredLineLength: 140

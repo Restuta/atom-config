@@ -70,6 +70,13 @@ span.line-number.cursor-line.linter-cursor-line.cursor-line-no-selection {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
+.atom-text-editor .cursor,
+atom-text-editor .cursor {
+  border-color: #48adff !important;
+  border-width: 2px;
+  // border-color: #fb4e4e !important;
+}
+
 .gutter .line-numbers {
   margin-right: 5px;
 }
@@ -140,6 +147,11 @@ atom-text-editor.editor .syntax--tasks.syntax--cancelled .syntax--attribute {
   // text-decoration: line-through;
 }
 
+.atom-text-editor .line.qlc::after,
+atom-text-editor .line.qlc::after {
+  color: rgba(79, 158, 82, 0.4);
+}
+
 atom-text-editor.editor .syntax--tasks.syntax--attribute {
   color: fade(#6699cc, 60%);
 }
@@ -203,6 +215,65 @@ span.syntax--constant.syntax--other.syntax--object.syntax--key.syntax--js
 .syntax--js.syntax--jsx
   .syntax--support.syntax--class.syntax--component.syntax--close.syntax--jsx {
   color: #71363a;
+}
+
+.react-atom-status-bar.github-StatusBarTileController {
+  color: #343d46;
+
+  .github-branch.inline-block {
+    color: #65737e;
+  }
+}
+
+.prettier-status-tile.inline-block.text-success {
+  color: #343d46;
+}
+
+atom-workspace atom-panel.bottom.tool-panel a,
+atom-workspace atom-panel.footer.tool-panel a {
+  color: #343d46;
+}
+
+.icon-info:before {
+  color: #343d46;
+}
+
+.deprecation-cop-status.inline-block.text-warning {
+  color: rgba(250, 200, 99, 0.3);
+}
+
+.about-release-notes {
+  color: rgba(102, 153, 204, 0.3);
+}
+
+.package-updates-status-view.inline-block.text.text-info {
+  color: rgba(102, 153, 204, 0.6);
+}
+
+busy-signal.idle::before {
+  background-color: rgba(153, 199, 148, 0.5);
+}
+
+status-bar-file.file-info.inline-block a {
+  color: rgba(102, 153, 204, 0.4) !important;
+}
+
+atom-workspace atom-panel.footer.tool-panel.panel-footer {
+  background-color: #131415;
+  border-top: none;
+  box-shadow: none;
+}
+
+.text-warning::before,
+.status-modified::before,
+.highlight-warning::before {
+  color: rgba(250, 200, 99, 0.3);
+}
+
+span.syntax--markup.syntax--underline.syntax--link.syntax--https.syntax--hyperlink,
+.syntax--http,
+.https {
+  color: rgba(102, 153, 204, 0.6) !important;
 }
 
 // base 00: #1B2B34

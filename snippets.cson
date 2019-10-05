@@ -114,6 +114,9 @@
   'require:ramda':
     'prefix': 'rr',
     'body': "const R = require('ramda')"
+  'require:ramda-sheep':
+    'prefix': 'rs',
+    'body': "const { $1 } = require('toast/lib/ramda-sheep')"
   'p.coroutine':
     'prefix': 'pco',
     'body': """
